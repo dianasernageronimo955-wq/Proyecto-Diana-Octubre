@@ -111,6 +111,11 @@ input:focus,select:focus,textarea:focus{border-color:var(--azul);outline:none;bo
 .nota{font-size:.9rem;margin-top:10px;color:#5b6780}
 footer{background:var(--marino);color:#dce6f7;text-align:center;padding:30px 20px;font-size:.95rem;border-top:4px solid var(--oro)}
 
+/* Si la última foto queda sola en su fila, se centra */
+@media(min-width:961px){
+  .fotos .foto:last-child:nth-child(3n+1){grid-column:2/3}
+}
+
 @media(max-width:960px){
   .burger{display:block}
   .idioma{margin-left:auto}
