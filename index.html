@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colegio Particular Brillantes del Futuro | Huánuco</title>
+<meta name="description" content="Colegio Particular Brillantes del Futuro, Huánuco. Inicial, primaria y secundaria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marino:#0d2a5c;
+  --azul:#1f4e9c;
+  --cielo:#f1f5fb;
+  --oro:#d4a017;
+  --texto:#2a3345;
+  --linea:#d9e1ee;
+  --tit:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --cue:'Source Sans 3','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--cue);color:var(--texto);background:#fff;line-height:1.7;font-size:17px}
+h1,h2,h3{font-family:var(--tit);color:var(--marino);line-height:1.25}
+:focus-visible{outline:3px solid var(--oro);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:84px 0}
+h2{font-size:clamp(1.9rem,4vw,2.5rem);margin-bottom:6px}
+h2::after{content:"";display:block;width:56px;height:3px;background:var(--oro);margin-top:14px}
+.intro{max-width:62ch;margin:18px 0 40px;font-size:1.06rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
+
+/* Encabezado */
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:3px solid var(--oro);box-shadow:0 2px 10px rgba(13,42,92,.08)}
+.barra{display:flex;align-items:center;gap:18px;min-height:74px}
+.marca{font-family:var(--tit);font-weight:700;font-size:1.12rem;color:var(--marino);text-decoration:none;display:flex;align-items:center;gap:12px;line-height:1.15}
+.marca i{flex:none;width:34px;height:34px;background:var(--marino);border-bottom:5px solid var(--oro);border-radius:3px}
+nav{margin-left:auto}
+nav ul{display:flex;list-style:none;gap:2px}
+nav a{display:block;padding:10px 13px;color:var(--marino);text-decoration:none;font-weight:600;font-size:.95rem;border-bottom:3px solid transparent}
+nav a:hover,nav a.activo{color:var(--azul);border-bottom-color:var(--oro)}
+.idioma{display:flex;flex:none;border:1px solid var(--linea);border-radius:4px;overflow:hidden}
+.idioma button{background:#fff;border:0;color:#5b6780;font:600 .72rem var(--cue);padding:4px 8px;cursor:pointer;white-space:nowrap;line-height:1.4}
+.idioma button+button{border-left:1px solid var(--linea)}
+.idioma button.on{background:var(--cielo);color:var(--marino)}
+.burger{display:none;background:none;border:1px solid var(--linea);color:var(--marino);border-radius:4px;padding:5px 11px;font:700 1.1rem var(--cue);cursor:pointer}
+
+/* Inicio */
+#inicio{padding:0;background:linear-gradient(120deg,var(--marino) 0%,#17428a 100%);color:#fff}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding:96px 24px}
+.hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:18px}
+.hero p{max-width:52ch;font-size:1.13rem;margin-bottom:30px;color:#dce6f7}
+.botones{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 26px;border-radius:5px;font:700 .98rem var(--cue);text-decoration:none;border:0;cursor:pointer}
+.btn-sol{background:var(--oro);color:var(--marino)}
+.btn-sol:hover{background:#e3b232}
+.btn-borde{border:2px solid #fff;color:#fff}
+.btn-borde:hover{background:#fff;color:var(--marino)}
+.btn-wa{background:var(--marino);color:#fff}
+.btn-wa:hover{background:var(--azul)}
+.panel{background:#fff;color:var(--texto);border-top:5px solid var(--oro);border-radius:6px;padding:28px 28px 20px}
+.panel h3{font-size:1.35rem;margin-bottom:12px}
+.panel ul{list-style:none}
+.panel li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-top:1px solid var(--linea)}
+.panel li strong{color:var(--marino)}
+.panel li span{color:#5b6780;font-size:.95rem}
+
+/* Nosotros */
+.caja{padding:28px;border:1px solid var(--linea);border-top:4px solid var(--azul);border-radius:6px;background:#fff}
+.caja:nth-child(2){border-top-color:var(--oro)}
+.caja:nth-child(3){border-top-color:var(--marino)}
+.caja h3{font-size:1.45rem;margin-bottom:10px}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{border:1px solid var(--linea);background:var(--cielo);border-radius:4px;padding:4px 13px;font-weight:600;color:var(--marino);font-size:.95rem}
+.fundadora{margin-top:36px;padding:22px 28px;border-left:5px solid var(--oro);background:var(--cielo);font-size:1.06rem}
+
+/* Servicios */
+#servicios{background:var(--cielo)}
+.nivel{background:#fff;border:1px solid var(--linea);border-radius:6px;padding:30px}
+.nivel h3{font-size:1.55rem}
+.edad{display:block;color:var(--azul);font-weight:700;margin:4px 0 16px;padding-bottom:14px;border-bottom:1px solid var(--linea)}
+.nivel ul{padding-left:20px}
+.nivel li{margin-bottom:6px}
+
+/* Proyectos */
+.proyecto{border:1px solid var(--linea);border-left:5px solid var(--azul);border-radius:6px;background:#fff}
+.proyecto:nth-child(2){border-left-color:var(--oro)}
+.proyecto:nth-child(3){border-left-color:var(--marino)}
+.proyecto .cuerpo{padding:26px 28px 30px}
+.proyecto h3{font-size:1.3rem;margin-bottom:8px}
+
+/* Galería */
+#galeria{background:var(--cielo)}
+.fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.foto{position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden;background:linear-gradient(135deg,#17428a,var(--marino))}
+.foto:nth-child(3n+2){background:linear-gradient(135deg,var(--azul),#17428a)}
+.foto:nth-child(3n){background:linear-gradient(135deg,#b98b12,#8a6a10)}
+.foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.foto figcaption{position:absolute;left:0;right:0;bottom:0;background:rgba(13,42,92,.85);color:#fff;font-weight:600;font-size:.95rem;padding:10px 16px}
+
+/* Contacto */
+.contacto{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start}
+.dato{border:1px solid var(--linea);border-radius:6px;padding:22px 24px;margin-bottom:18px}
+.dato h3{font-size:1.15rem;margin-bottom:4px}
+form{background:#fff;padding:32px;border:1px solid var(--linea);border-top:5px solid var(--oro);border-radius:6px}
+form h3{font-size:1.5rem;margin-bottom:18px}
+label{display:block;font-weight:700;font-size:.95rem;margin-bottom:4px;color:var(--marino)}
+input,select,textarea{width:100%;padding:11px 13px;border:1px solid #b9c6dc;border-radius:5px;font:inherit;margin-bottom:15px;background:#fff;color:var(--texto)}
+input:focus,select:focus,textarea:focus{border-color:var(--azul);outline:none;box-shadow:0 0 0 3px rgba(31,78,156,.15)}
+.nota{font-size:.9rem;margin-top:10px;color:#5b6780}
+footer{background:var(--marino);color:#dce6f7;text-align:center;padding:30px 20px;font-size:.95rem;border-top:4px solid var(--oro)}
+
+@media(max-width:960px){
+  .burger{display:block}
+  .idioma{margin-left:auto}
+  nav{position:absolute;left:0;right:0;top:74px;margin:0;background:#fff;border-bottom:3px solid var(--oro);display:none;padding:6px 24px 16px}
+  nav.abierto{display:block}
+  nav ul{flex-direction:column}
+  nav a{border-bottom:1px solid var(--linea)}
+  .hero,.contacto{grid-template-columns:1fr}
+  .hero{padding:60px 24px}
+  section{padding:60px 0}
+  .marca span{display:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap barra">
+    <a class="marca" href="#inicio"><i aria-hidden="true"></i><span>Brillantes del Futuro</span></a>
+    <nav id="menu" aria-label="Menu">
+      <ul>
+        <li><a href="#inicio" class="activo" data-i="n1">Inicio</a></li>
+        <li><a href="#nosotros" data-i="n2">Nosotros</a></li>
+        <li><a href="#servicios" data-i="n3">Servicios</a></li>
+        <li><a href="#proyectos" data-i="n4">Proyectos</a></li>
+        <li><a href="#galeria" data-i="n5">Galería de Fotos</a></li>
+        <li><a href="#contacto" data-i="n6">Contáctanos</a></li>
+      </ul>
+    </nav>
+    <div class="idioma" role="group" aria-label="Idioma / Language">
+      <button type="button" id="btnEs" class="on" onclick="setLang('es')" title="Español">🇵🇪 ES</button>
+      <button type="button" id="btnEn" onclick="setLang('en')" title="English">🇺🇸 EN</button>
+    </div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰</button>
+  </div>
+</header>
+
+<main>
+<section id="inicio">
+  <div class="wrap hero">
+    <div>
+      <h1>Colegio Particular Brillantes del Futuro</h1>
+      <p data-i="h1">Educación inicial, primaria y secundaria en Huánuco. Acompañamos a cada estudiante para que aprenda con alegría, crezca con valores y brille en su futuro.</p>
+      <div class="botones">
+        <a class="btn btn-sol" href="#contacto" data-i="h2">Matricúlate aquí</a>
+        <a class="btn btn-borde" href="#nosotros" data-i="h3">Conoce nuestro colegio</a>
+      </div>
+    </div>
+    <aside class="panel">
+      <h3 data-i="h0">Matrículas abiertas</h3>
+      <ul>
+        <li><strong data-i="s1">Inicial</strong> <span data-i="s2">3 a 5 años</span></li>
+        <li><strong data-i="s6">Primaria</strong> <span data-i="s7">1.º a 6.º grado</span></li>
+        <li><strong data-i="s11">Secundaria</strong> <span data-i="s12">1.º a 5.º año</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="wrap">
+    <h2 data-i="n2">Nosotros</h2>
+    <p class="intro" data-i="o0">Somos un colegio particular de Huánuco que cree en el talento de cada niño y joven. Aquí aprenden con cariño, disciplina y confianza.</p>
+    <div class="grid">
+      <article class="caja"><h3 data-i="o1">Misión</h3><p data-i="o2">Brindar una educación integral y de calidad, que desarrolle los conocimientos, las habilidades y los valores de nuestros estudiantes, con el apoyo de docentes comprometidos y de las familias.</p></article>
+      <article class="caja"><h3 data-i="o3">Visión</h3><p data-i="o4">Ser reconocidos en Huánuco como un colegio que forma personas íntegras, creativas y líderes, preparadas para estudiar, trabajar y aportar a su comunidad.</p></article>
+      <article class="caja"><h3 data-i="o5">Valores</h3>
+        <ul class="chips"><li data-i="v1">Respeto</li><li data-i="v2">Responsabilidad</li><li data-i="v3">Honestidad</li><li data-i="v4">Solidaridad</li><li data-i="v5">Perseverancia</li><li data-i="v6">Amor por el Perú</li></ul></article>
+    </div>
+    <p class="fundadora" data-i="o6">Nuestro colegio fue creado por Diana S. Gerónimo, con el sueño de ofrecer a las familias de Huánuco una educación cercana y de calidad.</p>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <h2 data-i="n3">Servicios</h2>
+    <p class="intro" data-i="s0">Tres niveles para acompañar a tu hijo desde sus primeros años hasta terminar el colegio.</p>
+    <div class="grid">
+      <article class="nivel"><h3><span data-i="s1">Inicial</span></h3><span class="edad" data-i="s2">3 a 5 años</span>
+        <ul><li data-i="s3">Aprendizaje a través del juego</li><li data-i="s4">Primeras letras y números</li><li data-i="s5">Arte, música y movimiento</li></ul></article>
+      <article class="nivel"><h3><span data-i="s6">Primaria</span></h3><span class="edad" data-i="s7">1.º a 6.º grado</span>
+        <ul><li data-i="s8">Comunicación y matemática reforzadas</li><li data-i="s9">Hábitos de estudio y lectura</li><li data-i="s10">Inglés, computación y deportes</li></ul></article>
+      <article class="nivel"><h3><span data-i="s11">Secundaria</span></h3><span class="edad" data-i="s12">1.º a 5.º año</span>
+        <ul><li data-i="s13">Preparación para la universidad e institutos</li><li data-i="s14">Ciencias, tecnología e inglés</li><li data-i="s15">Orientación vocacional y tutoría</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="wrap">
+    <h2 data-i="n4">Proyectos</h2>
+    <p class="intro" data-i="p0">Aprender también es hacer. Estos son algunos proyectos que realizamos con nuestros estudiantes.</p>
+    <div class="grid">
+      <article class="proyecto"><div class="cuerpo"><h3 data-i="p1">Huerto escolar</h3><p data-i="p2">Los estudiantes siembran y cuidan hortalizas, y aprenden a respetar la naturaleza y a alimentarse mejor.</p></div></article>
+      <article class="proyecto"><div class="cuerpo"><h3 data-i="p3">Club de lectura</h3><p data-i="p4">Lecturas, cuentos y concursos de oratoria que mejoran la comprensión y ayudan a perder el miedo a hablar en público.</p></div></article>
+      <article class="proyecto"><div class="cuerpo"><h3 data-i="p5">Feria de ciencia y tecnología</h3><p data-i="p6">Cada año presentan experimentos e inventos propios ante sus familias y toda la comunidad escolar.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <h2 data-i="n5">Galería de Fotos</h2>
+    <p class="intro" data-i="g0">Momentos de la vida en nuestro colegio.</p>
+    <div class="fotos">
+      <!-- TUS FOTOS: crea una carpeta "fotos" junto a index.html y guarda foto1.jpg ... foto6.jpg. Se mostrarán solas encima de estos fondos. -->
+      <figure class="foto"><img src="fotos/foto1.jpg" alt="" onerror="this.remove()"><figcaption data-i="g1">Nuestro colegio</figcaption></figure>
+      <figure class="foto"><img src="fotos/foto2.jpg" alt="" onerror="this.remove()"><figcaption data-i="g2">Aprendemos juntos</figcaption></figure>
+      <figure class="foto"><img src="fotos/foto3.jpg" alt="" onerror="this.remove()"><figcaption data-i="g3">Hora de recreo</figcaption></figure>
+      <figure class="foto"><img src="fotos/foto4.jpg" alt="" onerror="this.remove()"><figcaption data-i="g4">Huerto escolar</figcaption></figure>
+      <figure class="foto"><img src="fotos/foto5.jpg" alt="" onerror="this.remove()"><figcaption data-i="g5">Feria de ciencia</figcaption></figure>
+      <figure class="foto"><img src="fotos/foto6.jpg" alt="" onerror="this.remove()"><figcaption data-i="g6">Actuaciones y fiestas</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <h2 data-i="n6">Contáctanos</h2>
+    <p class="intro" data-i="c0">Escríbenos o visítanos. Con gusto te informamos sobre vacantes, costos y horarios.</p>
+    <div class="contacto">
+      <div>
+        <div class="dato"><h3><span data-i="c1">Dirección</span></h3><p>Jr. TU DIRECCIÓN AQUÍ N.º 000</p><p>Huánuco, Perú</p></div>
+        <div class="dato"><h3>WhatsApp</h3><p>+51 999 999 999</p>
+          <p style="margin-top:12px"><a class="btn btn-wa" id="btnWa" href="#" target="_blank" rel="noopener" data-i="c2">Escribir por WhatsApp</a></p></div>
+      </div>
+      <form id="form">
+        <h3 data-i="f0">Formulario de matrícula</h3>
+        <label for="apo" data-i="f1">Nombre del padre, madre o apoderado</label>
+        <input id="apo" required autocomplete="name">
+        <label for="est" data-i="f2">Nombre del estudiante</label>
+        <input id="est" required>
+        <label for="niv" data-i="f3">Nivel al que desea postular</label>
+        <select id="niv" required><option value="" data-i="f4">Elige un nivel</option><option value="s1" data-i="s1">Inicial</option><option value="s6" data-i="s6">Primaria</option><option value="s11" data-i="s11">Secundaria</option></select>
+        <label for="gra" data-i="f5">Edad o grado del estudiante</label>
+        <input id="gra" required data-ph="f6" placeholder="Ejemplo: 4 años, 3.º de primaria">
+        <label for="tel" data-i="f7">Teléfono o WhatsApp de contacto</label>
+        <input id="tel" type="tel" required autocomplete="tel">
+        <label for="msg" data-i="f8">Mensaje (opcional)</label>
+        <textarea id="msg" rows="3"></textarea>
+        <button class="btn btn-sol" type="submit" data-i="f9">Enviar solicitud por WhatsApp</button>
+        <p class="nota" data-i="f10">Al enviar, se abrirá WhatsApp con tus datos listos para mandarnos.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><p>© <span id="anio"></span> Colegio Particular Brillantes del Futuro · Huánuco, Perú</p></footer>
+
+<script>
+// CAMBIA AQUÍ el WhatsApp del colegio: 51 + número, sin + ni espacios
+var WHATSAPP = "51999999999";
+
+var T = {
+es:{t:"Colegio Particular Brillantes del Futuro | Huánuco",n1:"Inicio",n2:"Nosotros",n3:"Servicios",n4:"Proyectos",n5:"Galería de Fotos",n6:"Contáctanos",
+h0:"Matrículas abiertas",h1:"Educación inicial, primaria y secundaria en Huánuco. Acompañamos a cada estudiante para que aprenda con alegría, crezca con valores y brille en su futuro.",h2:"Matricúlate aquí",h3:"Conoce nuestro colegio",
+o0:"Somos un colegio particular de Huánuco que cree en el talento de cada niño y joven. Aquí aprenden con cariño, disciplina y confianza.",o1:"Misión",o2:"Brindar una educación integral y de calidad, que desarrolle los conocimientos, las habilidades y los valores de nuestros estudiantes, con el apoyo de docentes comprometidos y de las familias.",o3:"Visión",o4:"Ser reconocidos en Huánuco como un colegio que forma personas íntegras, creativas y líderes, preparadas para estudiar, trabajar y aportar a su comunidad.",o5:"Valores",o6:"Nuestro colegio fue creado por Diana S. Gerónimo, con el sueño de ofrecer a las familias de Huánuco una educación cercana y de calidad.",
+v1:"Respeto",v2:"Responsabilidad",v3:"Honestidad",v4:"Solidaridad",v5:"Perseverancia",v6:"Amor por el Perú",
+s0:"Tres niveles para acompañar a tu hijo desde sus primeros años hasta terminar el colegio.",s1:"Inicial",s2:"3 a 5 años",s3:"Aprendizaje a través del juego",s4:"Primeras letras y números",s5:"Arte, música y movimiento",s6:"Primaria",s7:"1.º a 6.º grado",s8:"Comunicación y matemática reforzadas",s9:"Hábitos de estudio y lectura",s10:"Inglés, computación y deportes",s11:"Secundaria",s12:"1.º a 5.º año",s13:"Preparación para la universidad e institutos",s14:"Ciencias, tecnología e inglés",s15:"Orientación vocacional y tutoría",
+p0:"Aprender también es hacer. Estos son algunos proyectos que realizamos con nuestros estudiantes.",p1:"Huerto escolar",p2:"Los estudiantes siembran y cuidan hortalizas, y aprenden a respetar la naturaleza y a alimentarse mejor.",p3:"Club de lectura",p4:"Lecturas, cuentos y concursos de oratoria que mejoran la comprensión y ayudan a perder el miedo a hablar en público.",p5:"Feria de ciencia y tecnología",p6:"Cada año presentan experimentos e inventos propios ante sus familias y toda la comunidad escolar.",
+g0:"Momentos de la vida en nuestro colegio.",g1:"Nuestro colegio",g2:"Aprendemos juntos",g3:"Hora de recreo",g4:"Huerto escolar",g5:"Feria de ciencia",g6:"Actuaciones y fiestas",
+c0:"Escríbenos o visítanos. Con gusto te informamos sobre vacantes, costos y horarios.",c1:"Dirección",c2:"Escribir por WhatsApp",
+f0:"Formulario de matrícula",f1:"Nombre del padre, madre o apoderado",f2:"Nombre del estudiante",f3:"Nivel al que desea postular",f4:"Elige un nivel",f5:"Edad o grado del estudiante",f6:"Ejemplo: 4 años, 3.º de primaria",f7:"Teléfono o WhatsApp de contacto",f8:"Mensaje (opcional)",f9:"Enviar solicitud por WhatsApp",f10:"Al enviar, se abrirá WhatsApp con tus datos listos para mandarnos.",
+w0:"Hola, quisiera información sobre matrículas en Brillantes del Futuro",w1:"Solicitud de matrícula - Brillantes del Futuro",w2:"Apoderado",w3:"Estudiante",w4:"Nivel",w5:"Edad o grado",w6:"Teléfono",w7:"Mensaje",w8:"Sin mensaje"},
+en:{t:"Brillantes del Futuro Private School | Huánuco",n1:"Home",n2:"About Us",n3:"Services",n4:"Projects",n5:"Photo Gallery",n6:"Contact Us",
+h0:"Enrollment open",h1:"Preschool, primary and secondary education in Huánuco. We support every student to learn with joy, grow with strong values and shine in their future.",h2:"Enroll here",h3:"Get to know our school",
+o0:"We are a private school in Huánuco that believes in the talent of every child and young person. Here they learn with care, discipline and confidence.",o1:"Mission",o2:"To provide a complete, high-quality education that develops our students' knowledge, skills and values, with the support of committed teachers and families.",o3:"Vision",o4:"To be recognized in Huánuco as a school that shapes honest, creative and leading people, ready to study, work and contribute to their community.",o5:"Values",o6:"Our school was founded by Diana S. Gerónimo, with the dream of offering the families of Huánuco a caring, high-quality education.",
+v1:"Respect",v2:"Responsibility",v3:"Honesty",v4:"Solidarity",v5:"Perseverance",v6:"Love for Peru",
+s0:"Three levels to support your child from the first years until graduation.",s1:"Preschool",s2:"Ages 3 to 5",s3:"Learning through play",s4:"First letters and numbers",s5:"Art, music and movement",s6:"Primary",s7:"Grades 1 to 6",s8:"Strengthened reading and math",s9:"Study habits and reading",s10:"English, computing and sports",s11:"Secondary",s12:"Years 1 to 5",s13:"Preparation for university and institutes",s14:"Science, technology and English",s15:"Career guidance and tutoring",
+p0:"Learning is also doing. These are some of the projects we carry out with our students.",p1:"School garden",p2:"Students plant and care for vegetables, and learn to respect nature and eat better.",p3:"Reading club",p4:"Readings, stories and public speaking contests that improve comprehension and help students lose the fear of speaking in public.",p5:"Science and technology fair",p6:"Every year students present their own experiments and inventions to their families and the whole school community.",
+g0:"Moments from life at our school.",g1:"Our school",g2:"Learning together",g3:"Recess time",g4:"School garden",g5:"Science fair",g6:"Performances and parties",
+c0:"Write to us or come and visit. We will gladly tell you about openings, fees and schedules.",c1:"Address",c2:"Message us on WhatsApp",
+f0:"Enrollment form",f1:"Parent or guardian's name",f2:"Student's name",f3:"Level you are applying for",f4:"Choose a level",f5:"Student's age or grade",f6:"Example: 4 years old, 3rd grade",f7:"Phone or WhatsApp number",f8:"Message (optional)",f9:"Send request via WhatsApp",f10:"When you send, WhatsApp will open with your details ready to send to us.",
+w0:"Hello, I would like information about enrollment at Brillantes del Futuro",w1:"Enrollment request - Brillantes del Futuro",w2:"Guardian",w3:"Student",w4:"Level",w5:"Age or grade",w6:"Phone",w7:"Message",w8:"No message"}
+};
+var lang = "es";
+
+function setLang(l){
+  lang = l;
+  var d = T[l];
+  document.documentElement.lang = l;
+  document.title = d.t;
+  document.querySelectorAll("[data-i]").forEach(function(e){ e.textContent = d[e.getAttribute("data-i")]; });
+  document.querySelectorAll("[data-ph]").forEach(function(e){ e.placeholder = d[e.getAttribute("data-ph")]; });
+  document.getElementById("btnEs").classList.toggle("on", l === "es");
+  document.getElementById("btnEn").classList.toggle("on", l === "en");
+  document.getElementById("btnWa").href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(d.w0);
+  try { localStorage.setItem("idioma", l); } catch (e) {}
+}
+
+document.getElementById("anio").textContent = new Date().getFullYear();
+var guardado = "es";
+try { guardado = localStorage.getItem("idioma") || "es"; } catch (e) {}
+setLang(guardado === "en" ? "en" : "es");
+
+// Menú móvil
+var burger = document.getElementById("burger"), menu = document.getElementById("menu");
+burger.addEventListener("click", function(){
+  var a = menu.classList.toggle("abierto");
+  burger.setAttribute("aria-expanded", a);
+});
+var enlaces = menu.querySelectorAll("a");
+enlaces.forEach(function(a){ a.addEventListener("click", function(){
+  menu.classList.remove("abierto"); burger.setAttribute("aria-expanded","false");
+}); });
+
+// Resalta la sección visible
+var secs = Array.prototype.map.call(enlaces, function(a){ return document.querySelector(a.getAttribute("href")); });
+window.addEventListener("scroll", function(){
+  var pos = window.scrollY + 130, cur = 0;
+  secs.forEach(function(s,i){ if (s.offsetTop <= pos) cur = i; });
+  enlaces.forEach(function(a,i){ a.classList.toggle("activo", i === cur); });
+}, {passive:true});
+
+// Formulario -> WhatsApp (en el idioma activo)
+document.getElementById("form").addEventListener("submit", function(e){
+  e.preventDefault();
+  var d = T[lang], v = function(id){ return document.getElementById(id).value.trim(); };
+  var nivel = document.getElementById("niv").selectedOptions[0].textContent;
+  var txt = d.w1 + "\n" + d.w2 + ": " + v("apo") + "\n" + d.w3 + ": " + v("est") + "\n" +
+    d.w4 + ": " + nivel + "\n" + d.w5 + ": " + v("gra") + "\n" + d.w6 + ": " + v("tel") + "\n" +
+    d.w7 + ": " + (v("msg") || d.w8);
+  window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(txt), "_blank");
+});
+</script>
+</body>
+</html>
