@@ -48,7 +48,10 @@ nav a:hover,nav a.activo{color:var(--azul);border-bottom-color:var(--oro)}
 
 /* Inicio */
 #inicio{padding:0;background:linear-gradient(120deg,var(--marino) 0%,#17428a 100%);color:#fff}
-.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding:96px 24px}
+.portada{line-height:0;background:var(--marino)}
+.portada img{display:block;width:100%;height:auto}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding:64px 24px 88px}
+.solo-lectores{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:18px}
 .hero p{max-width:52ch;font-size:1.13rem;margin-bottom:30px;color:#dce6f7}
 .botones{display:flex;flex-wrap:wrap;gap:12px}
@@ -124,7 +127,8 @@ footer{background:var(--marino);color:#dce6f7;text-align:center;padding:30px 20p
   nav ul{flex-direction:column}
   nav a{border-bottom:1px solid var(--linea)}
   .hero,.contacto{grid-template-columns:1fr}
-  .hero{padding:60px 24px}
+  .hero{padding:52px 24px 60px}
+  .portada img{aspect-ratio:16/10;height:auto;object-fit:cover;object-position:left center}
   section{padding:60px 0}
   .marca span{display:none}
 }
@@ -156,9 +160,12 @@ footer{background:var(--marino);color:#dce6f7;text-align:center;padding:30px 20p
 
 <main>
 <section id="inicio">
+  <div class="portada">
+    <img src="fotos/portada.jpg" alt="Estudiantes del Colegio Particular Brillantes del Futuro" width="1600" height="685">
+  </div>
   <div class="wrap hero">
     <div>
-      <h1>Colegio Particular Brillantes del Futuro</h1>
+      <h1 class="solo-lectores">Colegio Particular Brillantes del Futuro</h1>
       <p data-i="h1">Educación inicial, primaria y secundaria en Huánuco. Acompañamos a cada estudiante para que aprenda con alegría, crezca con valores y brille en su futuro.</p>
       <div class="botones">
         <a class="btn btn-sol" href="#contacto" data-i="h2">Matricúlate aquí</a>
